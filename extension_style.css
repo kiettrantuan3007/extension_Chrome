@@ -1,6 +1,7 @@
 #extensionPopUp {
     width: fit-content;
     height: fit-content;
+    min-width: 300px;
     max-width: 400px;
     max-height: 500px;
     background-color: white;
