@@ -45,7 +45,7 @@ document.addEventListener('mouseup', async (value) => {
                 <p>${translated}</p>`
                 for (let phonetic of phonetics) {
                     if (!phonetic.text) continue
-                    else { addHTML = addHTML + `<a id="inExtension" ${(phonetic.audio) ? 'style = "color: blue"' : ''} onclick="this.firstChild.play()"><audio src="${(phonetic.audio) ? phonetic.audio : ""}"></audio>${phonetic.text} </a>` }
+                    else { addHTML = addHTML + `<a id="inExtension" ${(phonetic.audio) ? 'style = "font-size: 1rem; color: blue"' : 'style = "font-size: 1rem; color: black"'} onclick="this.firstChild.play()"><audio src="${(phonetic.audio) ? phonetic.audio : ""}"></audio>${phonetic.text} </a>` }
                 }
                 for (let meaning of meanings) {
                     addHTML = addHTML + `
@@ -60,8 +60,7 @@ document.addEventListener('mouseup', async (value) => {
                     addHTML = addHTML + `<h3 id="inExtension">${dataSearch}</h3><br>${translated}`
                 }
             })
-
-        document.querySelector("#extensionPopUp").innerHTML = addHTML
+        if (addHTML != '') document.querySelector("#extensionPopUp").innerHTML = addHTML
     }
 
 })

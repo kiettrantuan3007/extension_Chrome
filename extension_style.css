@@ -54,4 +54,6 @@
 .thank {
     background-color: aliceblue;
     text-decoration: wavy;
+    text-align: center;
+    margin-top: 10px;
 }
