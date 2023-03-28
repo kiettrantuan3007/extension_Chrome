@@ -1,11 +1,45 @@
 #extensionPopUp {
-    height: 500px;
-    width: 600px;
+    width: fit-content;
+    height: fit-content;
+    max-width: 400px;
+    max-height: 500px;
     background-color: white;
     border-radius: 5px;
     border: 1px solid black;
     position: absolute;
-    bottom: 0;
+    top: 0;
+    z-index: 1000;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    padding: 10px 20px;
+    filter: drop-shadow(0 0 0.75rem black);
+    color: black
+}
+
+#extensionPopUp h1,
+#extensionPopUp h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+
+}
+
+#extensionPopUp h3 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+#extensionPopUp p,
+#extensionPopUp span {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+#extensionPopUp i {
+    font-size: 1rem;
 }
 
 #extensionIFrame {
@@ -14,4 +48,9 @@
     position: absolute;
     bottom: 0;
     z-index: 1000;
+}
+
+.thank {
+    background-color: aliceblue;
+    text-decoration: wavy;
 }
