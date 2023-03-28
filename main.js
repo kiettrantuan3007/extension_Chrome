@@ -5,6 +5,10 @@ document.querySelector("head").append(extensionStyle)
 function killAllPopup() {
     document.getElementById("extensionPopUp").outerHTML = "";
 }
+
+document.addEventListener("keydown", () => {
+    killAllPopup();
+})
 document.addEventListener('mouseup', async (value) => {
     if (document.getElementById("extensionPopUp")) {
         if (value.toElement.id == "extensionPopUp" || value.toElement.id == "buttonPlay" || value.toElement.id == "inExtension") {
@@ -30,8 +34,6 @@ document.addEventListener('mouseup', async (value) => {
         const dich = await fetch(`https://translation.googleapis.com/language/translate/v2?q=${dataSearch}&target=vi&key=AIzaSyAT-ZHseAa2b3C5Mtc-T46v4jSHhifBCKc`, { method: "POST" })
         var translated = await dich.json()
         translated = translated.data.translations[0].translatedText
-
-        console.log(translated)
         await fetch(requestString)
             .then(res => {
                 if (res.status != 200) throw Error("Word not found!")
